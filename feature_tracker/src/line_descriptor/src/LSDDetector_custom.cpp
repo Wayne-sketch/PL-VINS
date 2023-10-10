@@ -40,7 +40,7 @@
  //M*/
 
 #include "precomp_custom.hpp"
-
+#include "my_lsd.hpp"
 //using namespace cv;
 namespace cv
 {

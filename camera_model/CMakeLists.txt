@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(camera_model)
+set(OpenCV_DIR "/home/ctx/opencv-4.2.0/build")
+set(cv_bridge_DIR /home/ctx/cv_bridge_ws/devel/share/cv_bridge/cmake)
 
 set(CMAKE_BUILD_TYPE "Release")
 set(CMAKE_CXX_FLAGS "-std=c++14")
@@ -13,7 +15,7 @@ find_package(catkin REQUIRED COMPONENTS
 find_package(Boost REQUIRED COMPONENTS filesystem program_options system)
 include_directories(${Boost_INCLUDE_DIRS})
 
-find_package(OpenCV REQUIRED)
+find_package(OpenCV 4.2 REQUIRED)
 
 # set(EIGEN_INCLUDE_DIR "/usr/local/include/eigen3")
 find_package(Ceres REQUIRED)

@@ -6,7 +6,8 @@ if(WIN32 AND NOT CYGWIN)
 else()
     set(HOME $ENV{HOME})
 endif()
-
+set(OpenCV_DIR "/home/ctx/opencv-4.2.0/build")
+set(cv_bridge_DIR /home/ctx/cv_bridge_ws/devel/share/cv_bridge/cmake)
 find_package(catkin REQUIRED COMPONENTS
  roscpp
  rospy
@@ -20,7 +21,7 @@ find_package(catkin REQUIRED COMPONENTS
  camera_model
 )
 
-find_package(OpenCV REQUIRED)
+find_package(OpenCV 4.2 REQUIRED)
 
 catkin_package(CATKIN_DEPENDS
 roscpp

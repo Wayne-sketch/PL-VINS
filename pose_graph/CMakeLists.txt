@@ -5,7 +5,8 @@ set(CMAKE_BUILD_TYPE "Release")
 set(CMAKE_CXX_FLAGS "-std=c++14")
 #-DEIGEN_USE_MKL_ALL")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3 -Wall -g")
-
+set(OpenCV_DIR "/home/ctx/opencv-4.2.0/build")
+set(cv_bridge_DIR /home/ctx/cv_bridge_ws/devel/share/cv_bridge/cmake)
 find_package(catkin REQUIRED COMPONENTS
     roscpp
     std_msgs
@@ -15,7 +16,7 @@ find_package(catkin REQUIRED COMPONENTS
     roslib
     )
 
-find_package(OpenCV)
+find_package(OpenCV 4.2)
 
 
 find_package(Ceres REQUIRED)

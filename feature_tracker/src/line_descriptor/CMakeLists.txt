@@ -1,7 +1,9 @@
 project( line-descriptor )
 
 cmake_minimum_required(VERSION 2.7)
-find_package( OpenCV 3 REQUIRED)
+set(OpenCV_DIR "/home/ctx/opencv-4.2.0/build")
+set(cv_bridge_DIR /home/ctx/cv_bridge_ws/devel/share/cv_bridge/cmake)
+find_package( OpenCV 4.2 REQUIRED)
 
 if(COMMAND cmake_policy)
   	cmake_policy(SET CMP0003 NEW)	
